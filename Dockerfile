@@ -1,7 +1,4 @@
-FROM alpine:latest
-LABEL maintainer="yourname@example.com"
+FROM httpd:latest
 
-RUN echo "Hello from Docker image!" > /message.txt
-RUN echo "Hello from dhiraj" > /message.txt
-
-CMD ["cat", "/message.txt"]
+# Add a custom message to index.html
+RUN echo "<h1>Hello from httpd container</h1>" > /usr/local/apache2/htdocs/index.html
