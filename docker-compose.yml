@@ -5,7 +5,7 @@ services:
     image: httpd:latest
     container_name: my-httpd2
     ports:
-      - "8085:80"   # Host port 8080 -> Container port 80
+      - "8090:80"   # Host port 8080 -> Container port 80
     volumes:
       - ./html:/usr/local/apache2/htdocs/   # Mount local "html" folder to serve website files
     restart: unless-stopped
