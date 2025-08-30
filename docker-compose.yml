@@ -2,24 +2,10 @@ version: "3.9"
 
 services:
   web:
-    image: nginx:latest
-    container_name: nginx_web
+    image: httpd:latest
+    container_name: my-httpd
     ports:
-      - "8088:80"
-    depends_on:
-      - db
-
-  db:
-    image: postgres:14
-    container_name: postgres_db
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydb
-    ports:
-      - "5432:5432"
+      - "8080:80"   # Host port 8080 -> Container port 80
     volumes:
-      - db_data:/var/lib/postgresql/data
-
-volumes:
-  db_data:
+      - ./html:/usr/local/apache2/htdocs/   # Mount local "html" folder to serve website files
+    restart: unless-stopped
