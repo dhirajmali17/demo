@@ -6,8 +6,8 @@ terraform {
     }
   }
 }
-aws_access_key_id = AKIATOQWCSIWMOGU2N6L
-aws_secret_access_key = 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
+aws_access_key_id = AKIATOQWCSIWAD27V3NM
+aws_secret_access_key = 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
 provider "aws" {
   region = "ap-south-1"
 }
