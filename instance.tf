@@ -9,10 +9,9 @@ terraform {
 
 provider "aws" {
   region = "ap-south-1"
+  aws_access_key_id = AKIATOQWCSIWAD27V3NM
+  aws_secret_access_key = 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
 }
-
-aws_access_key_id = AKIATOQWCSIWAD27V3NM
-aws_secret_access_key = 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
 
 resource "aws_instance" "myinstance2" {
   ami                         = "ami-02d26659fd82cf299"
