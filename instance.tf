@@ -19,7 +19,7 @@ resource "aws_instance" "myinstance" {
   subnet_id                   = "subnet-03bfdf85fe22a8020"
   associate_public_ip_address = true
   key_name                    = "dhiraj"
-  count                       = 2
+  count                       = 1
 
   tags = {
     Name = "tf-example"
