@@ -13,7 +13,7 @@ provider "aws" {
   secret_key = "5S6KDjxCCJI2waXNReTd6ydZXCMj29sbgPeEqa+K"
 }
 
-resource "aws_instance" "myinstance" {
+resource "aws_instance" "myinstance123" {
   ami                         = "ami-02d26659fd82cf299"
   instance_type               = "t2.micro"
   subnet_id                   = "subnet-03bfdf85fe22a8020"
@@ -22,6 +22,6 @@ resource "aws_instance" "myinstance" {
   count                       = 1
 
   tags = {
-    Name = "tf-example"
+    Name = "tf-example-3"
   }
 }
